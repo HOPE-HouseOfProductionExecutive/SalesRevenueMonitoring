@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    max-height: 100vh;
+    background: url('/assets/images/bg/login.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+}
+
+.box-container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 671px;
+    height: 661px;
+    box-sizing: border-box;
+    padding: 48px 48px 0;
+    background: linear-gradient(180deg, #296C96 -19%, #FFF 76%);
+    border-radius: 20px;
+
+    font-family: 'Rotunda';
+    color: white;
+}
+
+.box-container .title h1 {
+    line-height: 70%;
+    font-size: 46px;
+    font-weight: bold;
+}
+.box-container .title h3 {
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.box-container form {
+    margin-top: 58px;
+    color: black;
+}
+
+.box-container form .input-placeholder {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.box-container form .input-placeholder label {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.box-container form .input-placeholder input {
+    border: none;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    width: 100%;
+}
+
+input[type=email]:focus, input[type=password]:focus{
+    outline: 2px solid #3d3d3d;
+}
+
+.box-container form .input-placeholder .password {
+    position: relative;
+}
+
+.box-container form .input-placeholder .bi {
+    font-size: 26px;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 47%;
+    right: 13px;
+}
+
+.box-container form .input-placeholder a {
+    text-align: right;
+    font-size: 16px;
+    font-weight: 500;
+    color: #474747;
+    transition: 0.175s all;
+}
+.box-container form .input-placeholder a:hover {
+    color: #f7538f;
+}
+
+.box-container form button {
+    margin-top: 20px;
+    border-style: none;
+    border: none;
+    border-radius: 10px;
+    background: #568BAC;
+    padding: 10px 85px;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    color: white;
+    cursor: pointer;
+}
+

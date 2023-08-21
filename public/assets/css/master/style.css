@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --aside-width: 20rem;
+    --aside-close: 6rem;
+    --nav-top-height: 4.5rem;
+    --aside-color: rgba(255, 255, 255, 0.50);
+}
+
+*{
+    text-decoration: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+ul, li{
+    list-style: none;
+}
+ul {
+    padding: 0 !important;
+}
+
+body {
+    background: url('/assets/images/bg/login.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+.checkboxx:checked ~ .main{
+    grid-template-columns: var(--aside-width) 1fr;
+
+}
+
+.checkboxx:checked ~ .main .links{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.main{
+    display: grid;
+    grid-template-areas:
+        'aside header'
+        'aside main';
+    grid-template-columns: var(--aside-close) 1fr;
+    grid-template-rows: var(--nav-top-height) 1fr;
+    height: 100vh;
+}
+
+
+.nav-left{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: var(--aside-width);
+    box-sizing: border-box;
+    padding: 0.7rem 1.375rem 0 0;
+    grid-area: aside;
+    background: var(--aside-color);
+    z-index: 1;
+    /* padding-top: 1.8rem; */
+    transition: all 0.5s ease;
+}
+
+.nav-left.aktip{
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    width: var(--aside-close);
+}
+
+.nav-left .sidebar-heading {
+    padding-bottom: 2.375rem;
+    padding-left: 10px;
+    margin-left: 20px;
+    margin-right: 28px;;
+}
+
+.nav-left .sidebar-heading p {
+    /* line-height: 37px; */
+    font-family: 'Rotunda';
+    font-weight: 900;
+    font-style: normal;
+    color: #323232;
+    width: 13.6rem;
+    font-size: 30px;
+    display: inline;
+}
+.nav-left.aktip .sidebar-heading p{
+    display: none;
+}
+
+.nav-left .sidebar-heading i {
+    /* color: #000; */
+    font-size: 30px;
+    transform: translate(-50%, -30%);
+    position: absolute;
+    top: 2.1rem;
+    left: 90%;
+}
+.nav-left.aktip .sidebar-heading i {
+    left: 50%;
+}
+
+.nav-left.aktip ul{
+    margin-top: 2rem;
+}
+
+.nav-left.aktip ul li{
+    margin: 0;
+    padding-right: 0;
+}
+/* .nav-left.aktip ul li {
+} */
+
+.nav-left ul li{
+    position: relative;
+    height: 60px;
+    width: 100%;
+    margin: 0 20px;
+    padding-right: 10px;
+    line-height: 50px;
+}
+
+.nav-left ul li a {
+    color: #000;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+.nav-left ul li a .links {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-left ul li a .hover{
+    position: absolute;
+    left: 0;
+    display: none;
+}
+
+.nav-left ul li a:hover {
+    background: #fff;
+    color: #578CAD;
+}
+.nav-left ul li a:hover .hover{
+    display: inline;
+}
+
+.nav-left ul li i {
+    padding-left: 10px;
+    padding-right: 11px;
+    min-height: 26px;
+}
+.nav-left.aktip ul li i {
+    margin-left: 16px;
+    padding : 0;
+}
+
+.nav-left ul li a span {
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 19px;
+    /* line-height: 28px; */
+}
+.nav-left.aktip ul li a span {
+    opacity: 0;
+    display: none;
+}
+
+.session-info {
+    grid-area: header;
+    box-shadow: 0px 1px 43px rgba(0, 0, 0, 0.25);
+    background: var(--aside-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 1.5rem;
+    padding-right: 2.6rem;
+}
+
+.session-info .left {
+    display: flex;
+}
+
+.session-info .left p{
+    font-family: 'Rotunda Variable Font';
+    /* font-style: normal; */
+    font-weight: 900;
+    font-size: 16px;
+    color: #323232;
+}
+
+.session-info .left p:last-of-type {
+    margin-left: 4px;
+    margin-bottom: 0;
+}
+
+
+.session-info .right a{
+    padding: 0.5rem 1.2rem;
+    background: radial-gradient(172.86% 172.86% at 50% 100%, #F46F5D 13.33%, rgba(244, 111, 93, 0) 100%);
+    border-radius: 10px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: white;
+}
+
+.main-content {
+    grid-area: main;
+    position: relative;
+    z-index: 0;
+    height: calc(100vh - var(--nav-top-height));
+    /* min-height: 100vh; */
+    height: fit-content;
+}
+
