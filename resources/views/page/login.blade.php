@@ -7,7 +7,6 @@
     <title>Sales Revenue Monitoring</title>
     <link rel="stylesheet" href="/assets/css/auth/style.css">
     {{-- ICON --}}
-    <link rel="icon" href="/assets/images/logo.png" type="image/x-icon">
 
     {{-- FONT --}}
     <link rel="preload" href="/public/assets/fonts/Rotunda-font/Rotunda-Medium.woff2" as="font" type="font/woff2" crossorigin>
@@ -24,7 +23,6 @@
     <div class="box-container">
         <div class="title">
             <h1>Sales Revenue Monitoring</h1>
-            <h3>CSO - Jatabek</h3>
         </div>
         <form action="/login/user" method="POST">
             @csrf
