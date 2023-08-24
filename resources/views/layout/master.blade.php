@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compa                                                     tible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/assets/css/master/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 
     {{-- ICON --}}
     <link rel="icon" href="/assets/images/logo.png" type="image/x-icon">
@@ -12,7 +14,10 @@
     {{-- FONT --}}
     <link rel="preload" href="/public/assets/fonts/Rotunda-font/Rotunda-Black.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/public/assets/fonts/Rotunda-font/RotundaVariable-Regular.woff2" as="font" type="font/woff2" crossorigin>
-
+    <link rel="preload" href="/public/assets/fonts/Rotunda-font/Rotunda-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/public/assets/fonts/Rotunda-font/Rotunda-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/public/assets/fonts/Rotunda-font/Rotunda-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/public/assets/fonts/Rotunda-font/Rotunda-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
 
     {{-- BOOTSTRAP ICON --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -21,8 +26,15 @@
     {{-- JQUERY AJAX --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-
+    {{-- Bootstrap 5 --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    {{-- Bootstrap Table --}}
+    <link href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css">
+    <script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script>
+
 
     <title>Sales Revenue Monitoring</title>
 </head>
@@ -57,7 +69,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/register">
+                    <a href="/user/management">
                         <i class="bi bi-person-fill-gear"></i>
                         <span class="links">User Control</span>
                     </a>

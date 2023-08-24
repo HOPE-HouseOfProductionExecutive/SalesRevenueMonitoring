@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
@@ -23,6 +24,12 @@ Route::group(['middleware'=>['auth']], function() {
     });
     Route::get('/revenue', [DataController::class, 'getData']);
 
+    Route::get('/get/v1/data/revenue', [DataController::class, 'getDataJson'])->name('getDatas');
+
+
+
+
+    Route::get('/user/management', [UserController::class, 'getUser']);
 
     Route::get('/logout', function () {
         Session::flush();
@@ -32,7 +39,9 @@ Route::group(['middleware'=>['auth']], function() {
     });
 });
 
-
+Route::fallback(function () {
+    return view('page.login');
+});
 
 Route::get('/login', function () {
     return view('page.login');
