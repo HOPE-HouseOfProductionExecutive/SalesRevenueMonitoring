@@ -22,14 +22,20 @@ Route::group(['middleware'=>['auth']], function() {
     Route::get('/', function () {
         return view('layout.master');
     });
+
+    // Revenue
     Route::get('/revenue', [DataController::class, 'getData']);
-
     Route::get('/get/v1/data/revenue', [DataController::class, 'getDataJson'])->name('getDatas');
-
+    Route::post('/add/v1/data/revenue', [DataController::class, 'addDataRevenue'])->name('addData');
+    Route::put('/update/v1/data/revenue', [DataController::class, 'updateDataRevenue']);
+    Route::delete('/delete/v1/data/revenue', [DataController::class, 'removeDataRevenue']);
+    // ----------
 
 
 
     Route::get('/user/management', [UserController::class, 'getUser']);
+    Route::post('/user/management/add/user', [DataController::class, 'addUserData'])->name('addDataUser');
+
 
     Route::get('/logout', function () {
         Session::flush();

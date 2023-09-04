@@ -11,4 +11,9 @@ class UserController extends Controller
         $users = User::all();
         return view('page.user-management', compact('users'));
     }
+    
+    public function getUserJson() {
+        $users = User::all();
+        return response()->json($users);
+    }
 }
