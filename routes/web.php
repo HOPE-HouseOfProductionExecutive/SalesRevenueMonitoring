@@ -19,9 +19,9 @@ use Illuminate\Support\Facades\Session;
 */
 
 Route::group(['middleware'=>['auth']], function() {
-    Route::get('/', function () {
-        return view('layout.master');
-    });
+    Route::get('/', [DataController::class, 'goToDashboard']);
+    Route::get('/get/v1/data/revenue/total/spv', [DataController::class, 'getTotalSPV']);
+
 
     // Revenue
     Route::get('/revenue', [DataController::class, 'getData']);
@@ -32,10 +32,22 @@ Route::group(['middleware'=>['auth']], function() {
     // ----------
 
 
+    Route::get('/data/analytics', function () {
+        return view('page.analytics');
+        // Bus
+    });
+
+
 
     Route::get('/user/management', [UserController::class, 'getUser']);
     Route::post('/user/management/add/user', [DataController::class, 'addUserData'])->name('addDataUser');
 
+
+
+
+    Route::get('/user/profile', function () {
+        return view('page.profile');
+    });
 
     Route::get('/logout', function () {
         Session::flush();

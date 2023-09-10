@@ -2,6 +2,10 @@ input {
     border: none;
 }
 
+input, td {
+    /* font-family: 'Rotunda'; */
+}
+
 .testing {
     font-size: 40px;
 }
@@ -136,7 +140,7 @@ table.table-bordered>tbody>tr>td {
 }
 
 .box-modal .forms {
-    font-family: 'Rotunda';
+    /* font-family: 'Rotunda'; */
     height: 100%;
 }
 
@@ -161,7 +165,7 @@ table.table-bordered>tbody>tr>td {
 
 .box-modal-delete h4 {
     font-size: 24px;
-    font-family: 'Rotunda';
+    /* font-family: 'Rotunda'; */
     font-weight: 900;
     font-style: normal;
 

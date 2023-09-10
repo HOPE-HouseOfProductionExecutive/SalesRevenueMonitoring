@@ -16,11 +16,12 @@ return new class extends Migration
             $table->string('name');
             $table->string('spv');
             $table->integer('month');
-            $table->integer('new');
-            $table->integer('upgrade');
-            $table->integer('churn');
-            $table->integer('downgrade');
-            $table->integer('total');
+            $table->integer('year');
+            $table->bigInteger('new');
+            $table->bigInteger('upgrade');
+            $table->bigInteger('churn');
+            $table->bigInteger('downgrade');
+            $table->bigInteger('total');
             $table->timestamps();
         });
     }

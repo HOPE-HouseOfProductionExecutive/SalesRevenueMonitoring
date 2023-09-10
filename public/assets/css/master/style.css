@@ -1,4 +1,242 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'Rotunda';
+    src: url('/assets/fonts/Rotunda-BlackItalic.eot');
+    src: local('Rotunda Black Italic'), local('Rotunda-BlackItalic'),
+        url('/assets/fonts/Rotunda-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-BlackItalic.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-BlackItalic.woff') format('woff'),
+        url('/assets/fonts/Rotunda-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda Extra';
+    src: url('/assets/fonts/Rotunda-ExtraBoldItalic.eot');
+    src: local('Rotunda Extra Bold Italic'), local('Rotunda-ExtraBoldItalic'),
+        url('/assets/fonts/Rotunda-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-ExtraBoldItalic.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-ExtraBoldItalic.woff') format('woff'),
+        url('/assets/fonts/Rotunda-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda';
+    src: url('/assets/fonts/Rotunda-Bold.eot');
+    src: local('Rotunda Bold'), local('Rotunda-Bold'),
+        url('/assets/fonts/Rotunda-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-Bold.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-Bold.woff') format('woff'),
+        url('/assets/fonts/Rotunda-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda Hairline';
+    src: url('/assets/fonts/Rotunda-HairlineItalic.eot');
+    src: local('Rotunda Hairline Italic'), local('Rotunda-HairlineItalic'),
+        url('/assets/fonts/Rotunda-HairlineItalic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-HairlineItalic.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-HairlineItalic.woff') format('woff'),
+        url('/assets/fonts/Rotunda-HairlineItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda';
+    src: url('/assets/fonts/Rotunda-RegularItalic.eot');
+    src: local('Rotunda Italic'), local('Rotunda-RegularItalic'),
+        url('/assets/fonts/Rotunda-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-RegularItalic.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-RegularItalic.woff') format('woff'),
+        url('/assets/fonts/Rotunda-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda';
+    src: url('/assets/fonts/Rotunda-LightItalic.eot');
+    src: local('Rotunda Light Italic'), local('Rotunda-LightItalic'),
+        url('/assets/fonts/Rotunda-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-LightItalic.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-LightItalic.woff') format('woff'),
+        url('/assets/fonts/Rotunda-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda Italic Variable Font';
+    src: url('/assets/fonts/RotundaVariable-RegularItalic.eot');
+    src: local('Rotunda Italic Variable Font'), local('RotundaVariable-RegularItalic'),
+        url('/assets/fonts/RotundaVariable-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/RotundaVariable-RegularItalic.woff2') format('woff2'),
+        url('/assets/fonts/RotundaVariable-RegularItalic.woff') format('woff'),
+        url('/assets/fonts/RotundaVariable-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda';
+    src: url('/assets/fonts/Rotunda-Black.eot');
+    src: local('Rotunda Black'), local('Rotunda-Black'),
+        url('/assets/fonts/Rotunda-Black.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-Black.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-Black.woff') format('woff'),
+        url('/assets/fonts/Rotunda-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda Hairline';
+    src: url('/assets/fonts/Rotunda-Hairline.eot');
+    src: local('Rotunda Hairline'), local('Rotunda-Hairline'),
+        url('/assets/fonts/Rotunda-Hairline.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-Hairline.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-Hairline.woff') format('woff'),
+        url('/assets/fonts/Rotunda-Hairline.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda';
+    src: url('/assets/fonts/Rotunda-BoldItalic.eot');
+    src: local('Rotunda Bold Italic'), local('Rotunda-BoldItalic'),
+        url('/assets/fonts/Rotunda-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-BoldItalic.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-BoldItalic.woff') format('woff'),
+        url('/assets/fonts/Rotunda-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda Extra';
+    src: url('/assets/fonts/Rotunda-ExtraBold.eot');
+    src: local('Rotunda Extra Bold'), local('Rotunda-ExtraBold'),
+        url('/assets/fonts/Rotunda-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-ExtraBold.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-ExtraBold.woff') format('woff'),
+        url('/assets/fonts/Rotunda-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda';
+    src: url('/assets/fonts/Rotunda-MediumItalic.eot');
+    src: local('Rotunda Medium Italic'), local('Rotunda-MediumItalic'),
+        url('/assets/fonts/Rotunda-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-MediumItalic.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-MediumItalic.woff') format('woff'),
+        url('/assets/fonts/Rotunda-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda';
+    src: url('/assets/fonts/Rotunda-Thin.eot');
+    src: local('Rotunda Thin'), local('Rotunda-Thin'),
+        url('/assets/fonts/Rotunda-Thin.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-Thin.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-Thin.woff') format('woff'),
+        url('/assets/fonts/Rotunda-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda';
+    src: url('/assets/fonts/Rotunda-Medium.eot');
+    src: local('Rotunda Medium'), local('Rotunda-Medium'),
+        url('/assets/fonts/Rotunda-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-Medium.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-Medium.woff') format('woff'),
+        url('/assets/fonts/Rotunda-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda';
+    src: url('/assets/fonts/Rotunda-Regular.eot');
+    src: local('Rotunda'), local('Rotunda-Regular'),
+        url('/assets/fonts/Rotunda-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-Regular.woff') format('woff'),
+        url('/assets/fonts/Rotunda-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda';
+    src: url('/assets/fonts/Rotunda-ThinItalic.eot');
+    src: local('Rotunda Thin Italic'), local('Rotunda-ThinItalic'),
+        url('/assets/fonts/Rotunda-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-ThinItalic.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-ThinItalic.woff') format('woff'),
+        url('/assets/fonts/Rotunda-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda';
+    src: url('/assets/fonts/Rotunda-Light.eot');
+    src: local('Rotunda Light'), local('Rotunda-Light'),
+        url('/assets/fonts/Rotunda-Light.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Rotunda-Light.woff2') format('woff2'),
+        url('/assets/fonts/Rotunda-Light.woff') format('woff'),
+        url('/assets/fonts/Rotunda-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotunda Variable Font';
+    src: url('/assets/fonts/RotundaVariable-Regular.eot');
+    src: local('Rotunda Variable Font'), local('RotundaVariable-Regular'),
+        url('/assets/fonts/RotundaVariable-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/RotundaVariable-Regular.woff2') format('woff2'),
+        url('/assets/fonts/RotundaVariable-Regular.woff') format('woff'),
+        url('/assets/fonts/RotundaVariable-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 
 :root{
     --aside-width: 20rem;
@@ -11,6 +249,7 @@
     text-decoration: none !important;
     padding: 0;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -27,7 +266,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 
 
 .checkboxx:checked ~ .main{
@@ -81,7 +319,7 @@ body {
 
 .nav-left .sidebar-heading p {
     /* line-height: 37px; */
-    font-family: 'Rotunda';
+    /* font-family: 'Rotunda'; */
     font-weight: 900;
     font-style: normal;
     color: #323232;
@@ -191,9 +429,11 @@ body {
 }
 
 .session-info .left p{
-    font-family: 'Rotunda Variable Font';
+    /* font-family: 'Rotunda Variable Font'; */
     /* font-style: normal; */
-    font-weight: 900;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
     font-size: 16px;
     color: #323232;
 }
@@ -227,7 +467,7 @@ body {
 }
 
 .title-heading {
-    font-family: 'Rotunda';
+    /* font-family: 'Rotunda'; */
     font-weight: 900;
     font-size: 38px;
     margin-left: 30px;

@@ -1,0 +1,103 @@
+.containers {
+    box-sizing: border-box;
+    padding: 48px 45px;
+}
+
+.containers h2 {
+    font-weight: 900;
+}
+
+.filters {
+    display: flex;
+    width: 100%;
+    height: 62px;
+    background: #B3D3E3;
+    border-radius: 20px;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    padding: 0 45px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filters label {
+    font-size: 16px;
+}
+
+.count-data {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.count-data .data {
+    box-sizing: border-box;
+    padding: 12px 10px 12px 23px;
+    width: 24%;
+    height: 154px;
+    background: #279effd0;
+    color: #FFF;
+    border-radius: 16px;
+}
+
+
+/* .count-data .data.first {
+    background: #279effb8;
+    color: #FFF;
+}
+.count-data .data.second {
+    background: #DD58D6b8;
+    color: #FFF;
+}
+.count-data .data.third {
+    background: #B8414Db8;
+    color: #FFF;
+}
+.count-data .data.fourth {
+    background: #FFB84Cb8;
+    color: #FFF;
+} */
+
+.count-data .data h2 {
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+.count-data .data p {
+    line-height: 0%;
+}
+
+.count-data .data p:last-of-type {
+    line-height: 100%;
+    /* color: #59e536; */
+    color: #A6FF96;
+}
+
+.count-data .data h3 {
+    line-height: 50%;
+    font-size: 25px;
+}
+
+.graphic-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.graphic-container .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 27%;
+    /* height: 100px; */
+    background: #FFF;
+    border-radius: 16px;
+}
+
+.graphic-container .right {
+    box-sizing: border-box;
+    padding: 12px;
+    width: 71%;
+    /* height: 400px; */
+    background: #FFF;
+    border-radius: 16px;
+}

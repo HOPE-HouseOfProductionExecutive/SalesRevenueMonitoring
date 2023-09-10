@@ -63,7 +63,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/search-data">
+                    <a href="/data/analytics">
                         <i class="bi bi-file-earmark-bar-graph-fill"></i>
                         <span class="links">Analytics</span>
                     </a>
@@ -75,7 +75,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/account">
+                    <a href="/user/profile">
                         <i class="bi bi-person-fill"></i>
                         <span class="links">Account</span>
                     </a>

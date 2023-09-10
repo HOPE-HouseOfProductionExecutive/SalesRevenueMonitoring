@@ -4,15 +4,112 @@ namespace App\Http\Controllers;
 
 use App\Models\Revenue;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use NumberFormatter;
 
 class DataController extends Controller
 {
+    public function getTotalSPV() {
+        $year = Carbon::now()->format('Y');
+
+        $data1 = DB::table('revenues')
+            ->select(DB::raw('SUM(total) as total, month'))
+            ->where('spv', '=', 'Andry Setiawan')
+            ->where('year', '=', $year)
+            ->groupBy('month')
+            ->get();
+        $data2 = DB::table('revenues')
+            ->select(DB::raw('SUM(total) as total, month'))
+            ->where('spv', '=', 'Debby Tri')
+            ->where('year', '=', $year)
+            ->groupBy('month')
+            ->get();
+        $data3 = DB::table('revenues')
+            ->select(DB::raw('SUM(total) as total, month'))
+            ->where('spv', '=', 'Emihl Rembo')
+            ->where('year', '=', $year)
+            ->groupBy('month')
+            ->get();
+        $data4 = DB::table('revenues')
+            ->select(DB::raw('SUM(total) as total, month'))
+            ->where('spv', '=', 'Fransiscus Yura')
+            ->where('year', '=', $year)
+            ->groupBy('month')
+            ->get();
+        $data5 = DB::table('revenues')
+            ->select(DB::raw('SUM(total) as total, month'))
+            ->where('spv', '=', 'Fredericksen')
+            ->where('year', '=', $year)
+            ->groupBy('month')
+            ->get();
+        $data6 = DB::table('revenues')
+            ->select(DB::raw('SUM(total) as total, month'))
+            ->where('spv', '=', 'Fredy Mercury')
+            ->where('year', '=', $year)
+            ->groupBy('month')
+            ->get();
+
+        return response()->json([
+            'data1' => $data1,
+            'data2' => $data2,
+            'data3' => $data3,
+            'data4' => $data4,
+            'data5' => $data5,
+            'data6' => $data6,
+        ], 200);
+    }
+
+    public function goToDashboard() {
+        $data = Revenue::all();
+
+        $new = Revenue::sum('new');
+        $upgrade = Revenue::sum('upgrade');
+        $churn = Revenue::sum('churn');
+        $downgrade = Revenue::sum('downgrade');
+
+        $countNew = 0;
+        $countUpgrade = 0;
+        $countChurn = 0;
+        $countDowngrade = 0;
+
+        foreach ($data as $value) {
+            if($value->new != 0) {
+                $countNew ++;
+            }
+            if($value->upgrade != 0) {
+                $countUpgrade ++;
+            }
+            if($value->downgrade != 0) {
+                $countDowngrade ++;
+            }
+            if($value->churn != 0) {
+                $countChurn ++;
+            }
+        }
+        $numberFormatter = new NumberFormatter("en_US", NumberFormatter::CURRENCY);
+        $new = $numberFormatter->formatCurrency($new, 'IDR');
+        $upgrade = $numberFormatter->formatCurrency($upgrade, 'IDR');
+        $downgrade = $numberFormatter->formatCurrency($downgrade, 'IDR');
+        $churn = $numberFormatter->formatCurrency($churn, 'IDR');
+
+        return view('page.dashboard', compact([
+            'data',
+            'new',
+            'upgrade',
+            'churn',
+            'downgrade',
+            'countNew',
+            'countUpgrade',
+            'countChurn',
+            'countDowngrade'
+        ]));
+    }
+
     public function getData() {
-        // $data = Revenue::all()->sortByDesc('month', SORT_DESC);
-        // $data = Revenue::all();
         $data = Revenue::orderBy('month', 'asc')->get();
         return view('page.data', [ 'data'=>$data ]);
     }
@@ -78,7 +175,6 @@ class DataController extends Controller
         $data->save();
         return redirect()->back();
     }
-
 
     public function addUserData(Request $req) {
         $req->validate([
